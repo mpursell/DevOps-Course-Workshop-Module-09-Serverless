@@ -13,7 +13,6 @@ def main(request: func.HttpRequest, message: func.Out[str], msg: func.Out[typing
     subtitle = request_body.get("subtitle")
     languages = request_body.get("languages")
 
-
     rowKey = str(uuid.uuid4())
 
     data = {

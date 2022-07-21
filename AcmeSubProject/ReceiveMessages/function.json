@@ -5,8 +5,22 @@
       "name": "msg",
       "type": "queueTrigger",
       "direction": "in",
-      "queueName": "acmesub-translations-queue",
-      "connection": ""
+      "queueName": "acmesub-translations-queue"
+    },
+    {
+      "name": "messageJSON",
+      "type": "table",
+      "tableName": "AcmeTranslations",
+      "partitionKey": "message",
+      "rowKey": "{rowKey}",
+      "direction": "in"
+    },
+    {
+      "name": "processedSub",
+      "type": "table",
+      "tableName": "AcmeSubtitles",
+      "partitionKey": "message",
+      "direction": "out"
     }
   ]
 }
